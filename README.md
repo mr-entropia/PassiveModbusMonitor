@@ -8,4 +8,9 @@ Taps into existing Modbus RTU bus and passively decodes traffic
 * Decode 0x04 Read Input Registers
 
 ## Other features
-* Automatically decodes a single-precision IEEE 754 float if read is quantity is two
+* Automatically decodes a single-precision IEEE 754 float if read quantity for 0x03 is two
+
+## Tested instruments
+* Produal FLTA, wireless gateway for building automation
+* Finder 7E64, single phase energy meter
+* HK Instruments CDT2000, combination CO2/temperature/humidity transmitter
