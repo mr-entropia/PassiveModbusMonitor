@@ -139,7 +139,6 @@ ser = serial.Serial('COM3', 9600)
 
 # Set up variables for first time use
 framefinished = False
-bytecounter = 0
 rxbuffer = list()
 nextframe = 0
 quantity = 0
@@ -150,10 +149,8 @@ while True:
     # Blocking loop for receiving frames
     while not framefinished:
         rxbuffer.append(HexToStr(ser.read(1)))
-        bytecounter += 1
         (framefinished, nextframe, quantity) = CheckModbusFunction(rxbuffer, nextframe, quantity)
 
     # Succesfully received one frame, clear variables for next frame
     rxbuffer = list()
-    bytecounter = 0
     framefinished = False
