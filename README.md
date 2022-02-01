@@ -19,9 +19,10 @@ Taps into existing Modbus RTU bus and passively decodes traffic.
 * Finder 7E64, single phase energy meter
 * HK Instruments CDT2000, combination CO2/temperature/humidity transmitter
 * proconX modpoll 3.10, Modbus master simulator
+* Fronius Symo, a solar inverter
 
 ## Example output
-In this example, we are decoding three different measurements from a Finder 7E64 energy meter: mains voltage, instantaneous current, mains frequency and finally instantaneous active power
+In this example, we are decoding three different measurements from a Finder 7E64 energy meter: mains voltage, instantaneous current, mains frequency, instantaneous active power as well as power factor (cos phi)
 
 ```
 2022-01-27 22:32:05.833741 Read holding register for device ID 1 , Start address = 4108 Quantity = 2
